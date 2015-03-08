@@ -1,0 +1,8 @@
+Ryan Castner
+
+TO RUN:
+Ensure lab04_Castner_Ryan.R is in your "~/" directory
+Ensure helaData folder is in your "~/" directory
+On windows this is likely "C:/Users/%USERNAME$/Documents"
+call source("lab04_Castner_Ryan_part2.R") with that file
+in your working directory to run.
