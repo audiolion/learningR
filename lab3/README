@@ -1,0 +1,7 @@
+Ryan Castner
+
+To run the file put it in your working directory, do source()
+should pretty much be the same as it was for the other two labs.
+
+You need lab03_Castner_Ryan in the "~/" directory so that lab03_Castner_Ryan_part2.R
+can source it in and use it.
