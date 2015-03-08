@@ -1,0 +1,11 @@
+To run this script, put "Lab02_Castner_Ryan.R" in your working directory and run the source('Lab02_Castner_Ryan.R') command.
+
+This script does the following:
+
+1) Creates 5 different vectors, A, B, C, D, E
+	- Does computation as instructed, see comments for more details
+
+2) Draws 3 different plots and saves them to your default directory
+	- scatterplotA.png
+	- lineplotA.png
+	- scatterplotAvsB.png
