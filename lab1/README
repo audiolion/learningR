@@ -1,0 +1,17 @@
+To run this script, put "lab1.R" in your working directory and run the source('lab1.R') command.
+
+This script does the following:
+
+-- Creates a vector and does some operations on it
+1) creates a vector of 9 integer values
+2) Prints the vector
+3) Prints the elements in the vector reversed
+4) Prints a random permutation of the vector
+5) Prints the mean of the vector
+6) Prints the standard deviation of the vector
+
+-- Creates another vector representing 10 random die rolls
+1) Prints the results of 10 random die rolls
+2) Prints the highest frequency roll
+3) Prints the probabilty of rolling that roll frequency out of 10 rolls
+	according to a binomial distribution.
