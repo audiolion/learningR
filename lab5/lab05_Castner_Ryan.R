@@ -101,6 +101,3 @@ lineGraph <- function(df, fileName){
   legend('topright', names(df), lty=c(1), col=rainbow(5))
   dev.off()
 }
-
-helaData <- list.files(path="~/helaData", full.names=T, recursive=FALSE)
-vec <- processFile(helaData[1], 30)
