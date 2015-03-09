@@ -83,6 +83,8 @@ lineGraph <- function(df, fileName){
   #
   # Function sets up a line graph for a data frame that graphs lines based on
   # different columns of the data frame and saves plot to file in default dir
+  # The function also provides a legend based on the names of the columns of
+  # the data frame.
   #
   # Args:
   #   df - the data frame
@@ -95,6 +97,10 @@ lineGraph <- function(df, fileName){
   yAxisMax <- max(df[,1:ncol(df)])
   fileNamePng <- paste(fileName, ".png", sep="")
   png(fileNamePng)
-  plot.ts(df, plot.type=c("single"), main=fileName, col=rainbow(ncol(df)), ylim=c(yAxisMin, yAxisMax))
+  plot.ts(df, plot.type=c("single"), main=fileName, col=rainbow(ncol(df)), ylim=c(yAxisMin, yAxisMax), xlab="position", ylab="value")
+  legend('topright', names(df), lty=c(1), col=rainbow(5))
   dev.off()
 }
+
+helaData <- list.files(path="~/helaData", full.names=T, recursive=FALSE)
+vec <- processFile(helaData[1], 30)
