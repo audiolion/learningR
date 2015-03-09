@@ -34,13 +34,13 @@ movAvg <- function(inVec, window){
     for(i in 1:length(inVec)){
       # case of shortened window due to falling below length 1
       if(i - window < 1){
-        shortenedWindow <- i-1
-        outVec[i] = mean(inVec[i-floor(shortenedWindow/2):i+floor(shortenedWindow/2)-1])
+        shortenedWindow <- i
+        outVec[i] = mean(inVec[(i-floor(shortenedWindow/2)):(i+floor(window/2)-1)])
       }else if(i + window > length(inVec)){ # case of window passing vector len
         shortenedWindow <- length(inVec)-i
-        outVec[i] = mean(inVec[i-floor(shortenedWindow/2):i+floor(shortenedWindow/2)-1])
+        outVec[i] = mean(inVec[(i-floor(window/2)):(i+floor(shortenedWindow/2)-1)])
       }else{  # default case
-        outVec[i] = mean(inVec[i-(window/2):i+(window/2)-1])
+        outVec[i] = mean(inVec[(i-(window/2)):(i+(window/2)-1)])
       }
     }
   }else{
@@ -48,13 +48,13 @@ movAvg <- function(inVec, window){
     # an integer index
     for(i in 1:length(inVec)){
       if(i - window < 1){
-        shortenedWindow <- i-1
-        outVec[i] = mean(inVec[i-floor(shortenedWindow/2):i+floor(shortenedWindow/2)])
+        shortenedWindow <- i
+        outVec[i] = mean(inVec[(i-floor(shortenedWindow/2)):(i+floor(window/2))])
       }else if(i + window > length(inVec)){
-        shortenedWindow <- length(inVec)-i
-        outVec[i] = mean(inVec[i-floor(shortenedWindow/2):i+floor(shortenedWindow/2)])
+        shortenedWindow <- length(inVec)-i+1
+        outVec[i] = mean(inVec[(i-floor(window/2)):(i+floor(shortenedWindow/2))])
       }else{
-        outVec[i] = mean(inVec[i-floor(window/2):i+floor(window/2)])
+        outVec[i] = mean(inVec[(i-floor(window/2)):(i+floor(window/2))])
       }
     }
   }
