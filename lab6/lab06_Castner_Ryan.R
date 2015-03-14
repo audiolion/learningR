@@ -1,5 +1,5 @@
 library("ggplot2")
-source("~/[BIOL230] Bioinformatics Languages (R)/lab6/lab06_Castner_Ryan1.R")
+source("~/lab06_Castner_Ryan1.R")
 
 someWrapperFunction <- function(){
   helaData2 <- list.files(path="~/helaData2", full.names=T, recursive=FALSE)
@@ -27,7 +27,7 @@ someWrapperFunction <- function(){
   return(avgs)
 }
 
-#df <- someWrapperFunction()
+df <- someWrapperFunction()
 ggBox <- function(df){
   g <- ggplot(df) + geom_boxplot(aes(x=1, y=df[,1], fill="A")) +
             geom_boxplot(aes(x=2, y=df[,2], fill="B")) + geom_boxplot(aes(x=3, y=df[,3], fill="C")) + 
@@ -74,3 +74,7 @@ ggStat <- function(df){
   ggsave(file="scatterplot-hela.png")
   print(g)
 }
+
+ggBox(df)
+ggDense(df)
+ggStat(df)
